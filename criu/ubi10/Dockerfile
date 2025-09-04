@@ -49,7 +49,6 @@ RUN yum -y update && yum install -y \
     python3 \
     python3-protobuf \
     python3-pip \
-    python3-future \
     libnet-devel \
     nftables-devel \
     protobuf-devel \
