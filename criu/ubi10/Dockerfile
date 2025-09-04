@@ -25,7 +25,7 @@ ARG CRIU_BRANCH=criu-dev
 ARG CRIU_SHA
 
 RUN dnf install -y yum-utils https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm \
-    && yum-config-manager --enable codeready-builder-for-rhel-10-$(uname -p)-rpms*
+    && yum-config-manager --enable codeready-builder-for-rhel-10-$(uname -m)-rpms*
 
 # CRIU package dependencies
 RUN yum -y update && yum install -y \
