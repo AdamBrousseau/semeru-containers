@@ -30,7 +30,6 @@ RUN dnf install -y yum-utils https://dl.fedoraproject.org/pub/epel/epel-release-
 # CRIU package dependencies
 RUN yum -y update && yum install -y \
     glibc-locale-source \
-    kernel-devel \
     make \
     automake \
     gcc \
@@ -38,10 +37,8 @@ RUN yum -y update && yum install -y \
     glibc \
     vim \
     git \
-    asciidoc \
     gnutls-devel \
     libcap-devel \
-    libnl3-devel \
     nftables \
     pkgconfig \
     protobuf-c \
@@ -57,8 +54,7 @@ RUN yum -y update && yum install -y \
     libnftnl \
     libpcap \
     nftables \
-    protobuf-c \
-    xmlto
+    protobuf-c
 
 RUN cd /tmp; \
     git clone -b ${CRIU_BRANCH} ${CRIU_REPO}; \
